@@ -1,0 +1,21 @@
+[Unit]
+Description=TeamCity 10
+After=syslog.target network.target
+
+[Service]
+Type=simple
+Environment="TEAMCITY_SERVER_ENABLED=yes"
+Environment="TEAMCITY_SERVER_PATH={{ teamcity_server_dir }}"
+Environment="TEAMCITY_DATA_PATH={{ teamcity_server_data_dir }}"
+Environment="CATALINA_OPTS=-server -Xms2048m -Xmx2048m -XX:MaxPermSize=1024m -Dlog4j.configuration=\"file:{{ teamcity_server_dir }}/conf/teamcity-server-log4j.xml\" -Dteamcity_logs={{ teamcity_server_dir }}/logs -Djava.awt.headless=true"
+WorkingDirectory={{ teamcity_server_dir }}
+ExecStart={{ teamcity_server_dir }}/bin/catalina.sh run
+ExecStop={{ teamcity_server_dir }}/bin/catalina.sh stop -force
+Restart=on-failure
+RestartSec=2
+
+User=teamcity
+Group=teamcity
+
+[Install]
+WantedBy=multi-user.target

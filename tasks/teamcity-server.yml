@@ -16,8 +16,8 @@
 
 - name: "Put TeamCity service file"
   template:
-    src: "teamcity-server.conf.j2"
-    dest: "/etc/init/teamcity-server.conf"
+    src: "{{ teamcity_service_source }}"
+    dest: "{{ teamcity_service_target }}"
     mode: 0644
 
 - name: "Stop TeamCity Server before upgrade"

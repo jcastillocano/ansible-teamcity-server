@@ -1,0 +1,3 @@
+---
+teamcity_service_source: teamcity-server.conf.j2
+teamcity_service_target: /etc/init/teamcity-server.conf
