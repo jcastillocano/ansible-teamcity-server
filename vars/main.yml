@@ -3,7 +3,7 @@ teamcity_server_admin_user_created: "{{ teamcity_server_dir }}/admin-user-create
 teamcity_server_license_accepted: "{{ teamcity_server_dir }}/license-accepted"
 
 teamcity_service_source: teamcity-server.service.j2
-teamcity_service_target: /etc/systemd/system/teamcity-server
+teamcity_service_target: /etc/systemd/system/teamcity-server.service
 
 teamcity_server_bind_port: 8111
 
