@@ -38,3 +38,7 @@ teamcity_server_mysql_database_port: 3306
 
 # MySQL JDBC Driver Dir
 teamcity_server_mysql_jdbc_dir: "{{ teamcity_server_data_dir }}/lib/jdbc"
+
+# Install and/or configure
+install_teamcity: true
+configure_teamcity: true

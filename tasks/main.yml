@@ -7,8 +7,14 @@
     - "../vars/main.yml"
 
 - include: create-teamcity-user.yml
+  when: install_teamcity
 - include: mysql-connector.yml
-  when: "teamcity_server_db_type == 'mysql'"
+  when: "teamcity_server_db_type == 'mysql'" and install_teamcity
 - include: teamcity-server.yml
+  when: install_teamcity
+- include: configure-teamcity.yml
+  when: configure_teamcity
 - include: install-plugins.yml
+  when: configure_teamcity
 - include: license.yml
+  when: configure_teamcity
