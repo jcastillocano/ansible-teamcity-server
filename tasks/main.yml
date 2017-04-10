@@ -9,7 +9,7 @@
 - include: create-teamcity-user.yml
   when: install_teamcity
 - include: mysql-connector.yml
-  when: "teamcity_server_db_type == 'mysql'" and install_teamcity
+  when: "teamcity_server_db_type == 'mysql' and install_teamcity"
 - include: teamcity-server.yml
   when: install_teamcity
 - include: configure-teamcity.yml
