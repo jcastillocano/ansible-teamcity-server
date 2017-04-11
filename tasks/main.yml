@@ -18,3 +18,5 @@
   when: configure_teamcity
 - include: license.yml
   when: configure_teamcity
+- include: enable_agent.yml
+  when: configure_teamcity
