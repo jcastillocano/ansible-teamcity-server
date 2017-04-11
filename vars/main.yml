@@ -53,3 +53,5 @@ teamcity_server_plugins:
 
   - name: "webhook-plugin"
     url: https://github.com/tcplugins/tcWebHooks/releases/download/v1.1-alpha8.140.143/tcWebHooksPlugin-1.1-alpha8.140.143.zip
+  - name: "teamcity-graphite"
+    url: https://github.com/mendhak/teamcity-graphite/releases/download/v1.4/graphite.zip
