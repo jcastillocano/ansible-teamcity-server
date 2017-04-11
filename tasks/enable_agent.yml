@@ -1,5 +1,6 @@
 ---
 - name: "Start tc agent"
   command: "{{ teamcity_server_dir }}/buildAgent/bin/agent.sh start"
+  ignore_failure: true
   become: yes
   become_user: "{{ teamcity_server_user }}"
