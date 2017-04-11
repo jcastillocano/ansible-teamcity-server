@@ -12,9 +12,6 @@ teamcity_server_group: teamcity
 teamcity_server_home: /home/teamcity
 
 teamcity_server_plugins:
-  - name: "crowd-plugin"
-    url: https://dl.bintray.com/greggigon/generic/teamcity-crowd-plugin-0.3.0.zip
-
   - name: "ansible-plugin"
     url: https://github.com/andreizhuk/tc-ansible-runner/releases/download/v1.0.1/ansible-runner-dist.zip
 
@@ -53,5 +50,6 @@ teamcity_server_plugins:
 
   - name: "webhook-plugin"
     url: https://github.com/tcplugins/tcWebHooks/releases/download/v1.1-alpha8.140.143/tcWebHooksPlugin-1.1-alpha8.140.143.zip
+
   - name: "teamcity-graphite"
     url: https://github.com/mendhak/teamcity-graphite/releases/download/v1.4/graphite.zip
